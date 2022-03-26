@@ -57,7 +57,7 @@ const Index = () => {
               Vous n'avez pas de crédit ? Vous êtes dans un sous-sol ? 
               pas de problème, vous pouvez quand même reserver une course avec Cabrooz. 
             </Text>
-            <a href='https://play.google.com/store/apps/details?id=com.cabroozrider' target="_blank" rel="noreferrer">
+            <a href='https://play.google.com/store/apps/details?id=com.cabroozrider' rel="noreferrer" target="_blank">
               <Image src='/images/playStore.png'  width={'150px'} height={'150px'}/>
             </a> 
           </motion.div>
@@ -158,7 +158,7 @@ const Index = () => {
             </Text>
           </Container>
           <Container>
-          <a href='https://play.google.com/store/apps/details?id=com.cabroozrider' target="_blank" rel="noreferrer">
+          <a href='https://play.google.com/store/apps/details?id=com.cabroozrider' rel="noreferrer" target="_blank">
             <Image src='/images/play-store-dl.svg'  width={'200px'} height={'150px'}/>
           </a>
           </Container>
