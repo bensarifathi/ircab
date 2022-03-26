@@ -95,7 +95,7 @@ function Partenaire() {
                     </Text>
                         <a 
                         href='https://play.google.com/store/apps/details?id=com.cabroozdriver&hl=fr&gl=US'
-                        target='_blank'
+                        target='_blank' rel="noreferrer"
                         >
                             Télécharger l'application Driver 
                         </a>

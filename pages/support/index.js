@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { Box, Container, Heading, Stack, AspectRatio, Flex } from '@chakra-ui/react'
+import { Box, Container, Heading, Stack, Flex } from '@chakra-ui/react'
 import ContactCard from '../../components/ContactCard';
 
 
