@@ -24,7 +24,7 @@ function Support() {
         <ContactCard/> 
       </Stack>
       <Flex position='absolute' top={'70vh'} w={'100%'}>
-        <iframe width="100%" height="525" id="gmap_canvas" src="https://maps.google.com/maps?q=43%20rue%20hoggar%20hydra&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" />
+        <iframe width="100%" height="525" id="gmap_canvas" src="https://maps.google.com/maps?q=43%20rue%20hoggar%20hydra&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" />
       </Flex>
     </>
     

@@ -37,7 +37,7 @@ function ContactCard() {
         <Heading as={'h2'} size='md' color={'gray.500'} my={10}>
             Addresse
         </Heading>
-        <a href={googleMapUrl} target='_blank'>43 Rue Hoggar, Hydra Alger</a>
+        <a href={googleMapUrl} rel='noreferrer' target='_blank'>43 Rue Hoggar, Hydra Alger</a>
         <Divider orientation='horizontal' w={'80%'} color='gray.500' />
         <List spacing={5}>
             <ListItem>
