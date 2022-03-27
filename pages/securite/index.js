@@ -8,22 +8,22 @@ function Securite() {
   return (
     <>
       <Head>
-        <title>Ircab-Securite</title>
+        <title>iRcab-Securite</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Flex pt={10} pb={10}
         bg='#f7f7f7'
         >
-          <Container>
-            <Text as='span' fontSize={'lg'}>LA SÉCURITÉ D'ABORD </Text>
-            <Heading as={'h1'}>
+          <Container maxW='container.xl'>
+            <Text as='span' fontSize={'lg'} fontWeight='bold'>LA SÉCURITÉ D'ABORD </Text>
+            <Heading as={'h1'} fontSize='6xl'>
             Devenez une référence en montrant votre respect et bienveillance ! 
             </Heading>
           </Container>
       </Flex>
 
       <Container maxW='container.xl' my={10}>
-        <Heading as={'h1'}>
+        <Heading as={'h1'} textAlign='center' fontSize={'2xl'}>
         Des fonctions de sécurité en constante évolution. Règles pour chaque course,
         Nous nous concentrons toujours sur la façon dont nous pouvons partager 
         l'espace ensemble, 
@@ -40,7 +40,7 @@ function Securite() {
           SOYEZ UNE BONNE PERSONNE. PENSER À LA SANTÉ ET À LA SÉCURITÉ DES AUTRES.
         </Text>
         <SecuriteList title={'Engagez-vous à respecter la sécurité sanitaire'} order={1}>
-          Avant de monter à bord d'un véhicule ou de conduire avec Cabrooz, 
+          Avant de monter à bord d'un véhicule ou de conduire avec iRcab, 
           vous devez convenir que vous ne présentez aucun symptôme et que vous 
           suivrez les directives des CDC relatives à la COVID-19, notamment le 
           port d'un masque qui couvre la bouche et le nez (comme l'exige l'ordonnance 
@@ -49,7 +49,7 @@ function Securite() {
         <SecuriteList title={'Prenez un égoportrait si on vous le demande'} order={2}>
           Si nous recevons un rapport indiquant que vous ne portez pas votre masque, 
           vous devrez prendre un égoportrait avec votre masque avant de conduire ou 
-          de vous déplacer avec Cabrooz.
+          de vous déplacer avec iRcab.
         </SecuriteList>
         <SecuriteList title={'Faites-vous vacciner ou aidez les autres à se rendre aux sites de vaccination'}
           order={3}
@@ -63,7 +63,7 @@ function Securite() {
         <Container>
           <Heading as={'h1'} color='#0082FF'>LA SÉCURITÉ AVANT TOUT ! </Heading>
         </Container>
-        <SimpleGrid columns={{base:1, md:2, lg:3}} spacing={10}>
+        <SimpleGrid columns={{base:1, md:2, lg:3}} spacing={10} w='80%' mx='auto'>
           <SecuriteCard icon='/images/check.svg' 
             alt={'check icon'} title='Contrôles annuels et suivi continue' isIcon>
             Chaque chauffeur est tenu de passer une vérification des antécédents administrée 
@@ -73,7 +73,7 @@ function Securite() {
 
           <SecuriteCard icon='/images/presentation.svg' 
             alt={'presentation icon'} title='Formation obligatoire à la sécurité' isIcon>
-            Toute personne qui souhaite conduire avec Cabrooz doit compléter un programme 
+            Toute personne qui souhaite conduire avec iRcab doit compléter un programme 
             de sécurité 
             communautaire pour apprendre comment offrir des courses sécuritaires et 
             confortables pour tous.

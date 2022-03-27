@@ -2,19 +2,12 @@ import React from 'react'
 import {
     Box,
     Stack,
-    Heading,
     Flex,
     Button,
     useDisclosure,
-    Icon,
     Image
   } from "@chakra-ui/react";
-import {
-    MdSecurity,
-    MdContactSupport,
-    MdHandyman,
-    MdSupport,
- } from 'react-icons/md'
+
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Link from 'next/link'
 
@@ -29,14 +22,13 @@ function Navbar(props) {
       justify="space-between"
       wrap="wrap"
       padding={3}
-      bgGradient='linear(to-r, #0082FF, #02395a)'
+      bgGradient='linear(to-r, #047cc7, #02385A)'
       color="white"
       {...props}
+      borderBottom='2px solid #FE504F'
     >
-        <Flex align="center" mr={5}>
-            <Heading as="h1" size="lg" letterSpacing={"tighter"}>
-                <Link href="/"><a><Image src='/iRcab_Logo_1x.png' boxSize={'50px'}/></a></Link>
-            </Heading>
+        <Flex align="center">
+            <Link href="/"><a><Image src='/images/iRcab.png' height={'40px'}/></a></Link>
         </Flex>
 
         <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
@@ -50,21 +42,31 @@ function Navbar(props) {
             alignItems="center"
             mt={{ base: 4, md: 0 }}
         >
+            <Link href='/partenaire'>
+                <Button variant='ghost'>Partenaire</Button>
+            </Link>
+
             <Link href="/securite">
-            <Button variant='ghost' leftIcon={<Icon as={MdSecurity} />}><a>Securité</a></Button>
+            <Button variant='ghost'><a>Securité</a></Button>
             </Link>
             
             <Link href="/faq">
-                <Button variant='ghost' leftIcon={<Icon as={MdContactSupport} />}><a>FAQ</a></Button>
+                <Button variant='ghost'><a>FAQ</a></Button>
             </Link>
 
-            <Link href="/carriere">
-                <Button variant='ghost' leftIcon={<Icon as={MdHandyman} />}><a>Carrière</a></Button>
-            </Link>
+            {/* <Link href="/carriere">
+                <Button variant='ghost'><a>Carrière</a></Button>
+                </Link> */}
             
             <Link href="/support">
-                <Button variant='ghost' leftIcon={<Icon as={MdSupport} />}><a>Support</a></Button>
+                <Button variant='ghost'><a>Support</a></Button>
             </Link>
+
+            <a rel="noreferrer" target="_blank" href='https://play.google.com/store/apps/details?id=com.cabroozrider'>
+                <Button bg={'#FE504F'} _hover={{bg:'red'}} borderRadius={25}>
+                    Démarrer une course
+                </Button>
+            </a>
         </Stack>
     </Flex>
   )

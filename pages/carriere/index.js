@@ -6,14 +6,14 @@ function Carriere() {
   return (
     <>
     <Head>
-      <title>Ircab-Carriere</title>
+      <title>iRcab-Carriere</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <Box bgImg={'/images/bg-emploi.jpeg'} bgSize='cover' height="40vh">
       <Container py={20}>
-        <Text as='span' color={'white'} fontWeight='bold'>TRAVAILLER CHEZ CABROOZ </Text>
+        <Text as='span' color={'white'} fontWeight='bold'>TRAVAILLER CHEZ iRcab </Text>
         <Heading as='h1' color={'white'}>
-        Construisons Cabrooz ensemble ! Rejoignez-nous et démarrez votre carrière aujourd'hui !
+        Construisons iRcab ensemble ! Rejoignez-nous et démarrez votre carrière aujourd'hui !
         </Heading>
       </Container>
     </Box>

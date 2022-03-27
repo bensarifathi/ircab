@@ -7,8 +7,9 @@ import { FaLinkedinIn, FaFacebook, FaInstagram } from 'react-icons/fa'
 function Footer(props) {
   return (
     <Box
-        bgGradient="linear(to-r, #0082FF, #02395a)"
+        bgGradient='linear(to-r, #047cc7, #02385A)'
         color="white"
+        borderTop={'3px solid #8bd0fc'}
     >
       <Container as={Stack} maxW={'6xl'} py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
@@ -50,14 +51,14 @@ function Footer(props) {
       </Container>
       <Box
         borderTopWidth={1}
-        bgGradient="linear(to-r, #0082FF, #02395a)">
+        bgGradient='linear(to-r, #047cc7, #02385A)'>
         <Container
           py={4}
           direction={{ base: 'column', md: 'row' }}
           spacing={4}
           justify={{ md: 'space-between' }}
           align={{ md: 'center' }}>
-          <Text>© 2022 Ircab - Tous droits réservés.</Text>
+          <Text>© 2022 iRcab - Tous droits réservés.</Text>
         </Container>
       </Box>
 

@@ -14,16 +14,16 @@ function Partenaire() {
     return (
         <>
         <Head>
-            <title>Ircab</title>
+            <title>iRcab</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
         <Flex direction={'column'} bg='twitter.100'>
-            <Container my={10}>
-                <Heading as={'h1'}>Commencez à gagner de l'argent.
-                    10% de Commission seulement ! 
+            <Container my={10} maxW='container.xl'>
+                <Heading as={'h1'}>Commencez à gagner de l'argent avec 
+                    seulement 10% de commission ! 
                 </Heading>
-                <Text as={'span'} fontWeight='bold'>
-                Inscrivez-vous pour devenir partenaire Ircab
+                <Text as={'span'} fontWeight='bold' fontSize={'20px'}>
+                Inscrivez-vous pour devenir partenaire iRcab
                 </Text>
                 <Text as='p'>
                     Nous vous appelerons pour vous donner un rendez-vous afin de 
@@ -34,22 +34,22 @@ function Partenaire() {
         </Flex>
         <Flex direction={'column'} bg='#f7f7f7'>
             <Container maxW='container.xl' my={10}>
-                <Heading as='h1' size={'lg'}>Qu'est-ce que Ircab Driver ?</Heading>
+                <Heading as='h1' size={'lg'}>Qu'est-ce que iRcab Driver ?</Heading>
                 <Text as='p' maxW={'60%'} my={10}>
-                    L'application Cabrooz Driver est la meilleure application chauffeur partenaire 
+                    L'application iRcab Driver est la meilleure application chauffeur partenaire 
                     VTC en Algérie. Grace à son interface intuitive, facile d'utilisation et moderne, 
                     vous êtes prêts à commencer votre journée de travail en 2 clics seulement.
                 </Text>
                 <Text as='p' maxW={'60%'}>
-                    Tout le monde peut devenir Partenaire Cabrooz. 
+                    Tout le monde peut devenir Partenaire iRcab. 
                     Si vous avez une voiture et que vous voulez rentabiliser vos trajets 
                     ou simplement avoir un revenu complémentaire, vous pouvez vous 
                     inscrire en tant que partenaire et commencez à accepter des courses 
                     autour de vous. 
-                    Avec Cabrooz, vous recevez même les demandes des utilisateurs qui 
+                    Avec iRcab, vous recevez même les demandes des utilisateurs qui 
                     n'ont pas Internet !
                 </Text>
-                <Heading as='h1' size={'lg'} my={10}>Pourquoi Ircab ?</Heading>
+                <Heading as='h1' size={'lg'} my={10}>Pourquoi iRcab ?</Heading>
                 <SimpleGrid columns={{base:1, md:2, lg:3}} spacing={30}>
                     <PartenaireCard icon={'/images/conditions.svg'} 
                     title='Vos propres conditions'>
@@ -76,7 +76,7 @@ function Partenaire() {
             <Container my={10}>
                 <Heading as='h2' size='lg'>Comment ça marche ?</Heading>
                 <Text as='p'>
-                    Vous voulez devenir partenaire Cabrooz et vous ne savez pas quelles sont 
+                    Vous voulez devenir partenaire iRcab et vous ne savez pas quelles sont 
                     les procédures à suivre ? C'est très simple !
                 </Text>
             </Container>
@@ -90,7 +90,7 @@ function Partenaire() {
                 <Box>
                     <Heading as='h2' size='lg'>Téléchargez l'application Driver</Heading>
                     <Text as='p' maxW='60%' my={10}>
-                        Vous voulez devenir partenaire Cabrooz et vous ne savez pas 
+                        Vous voulez devenir partenaire iRcab et vous ne savez pas 
                         quelles sont les procédures à suivre ? C'est très simple !
                     </Text>
                         <a 
@@ -111,7 +111,7 @@ function Partenaire() {
                     <Heading as='h2' size='lg'>Dossier à fournir</Heading>
                     <Text as='p' maxW='60%' my={10}>
                         Après avoir terminé votre pré-inscription, 
-                        vous serez recontacté par l'équipe Cabrooz afin de compléter 
+                        vous serez recontacté par l'équipe iRcab afin de compléter 
                         votre dossier partenaire en fournissant les documents 
                         nécessaires.
                     </Text>
@@ -124,12 +124,12 @@ function Partenaire() {
                 minW='500px'
                 />
                 <Box>
-                    <Heading as='h2' size='lg'>Formation partenaires Ircab</Heading>
+                    <Heading as='h2' size='lg'>Formation partenaires iRcab</Heading>
                     <Text as='p' maxW='60%' my={10}>
                         Une fois votre dossier accepté, vous êtes invité à assister à 
-                        la formation de partenaires Cabrooz selon le planning 
+                        la formation de partenaires iRcab selon le planning 
                         disponible afin de mieux comprendre le fonctionnement de 
-                        l'application Ircab Driver.
+                        l'application iRcab Driver.
                     </Text>
                 </Box>
             </HStack>
@@ -139,7 +139,7 @@ function Partenaire() {
                 <Box>
                     <Heading as='h1' size={'3xl'}>Félicitations !</Heading>
                     <Heading as='h3' size={'xs'}>
-                        Vous êtes prêt à démarrer votre première course Cabrooz
+                        Vous êtes prêt à démarrer votre première course iRcab
                     </Heading>
                 </Box>
             </HStack>

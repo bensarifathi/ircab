@@ -12,7 +12,7 @@ function Success() {
   return (
     <>
         <Head>
-            <title>Ircab-Preinscription-Success</title>
+            <title>iRcab-Preinscription-Success</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
         <Box bg='twitter.100' py={20}>

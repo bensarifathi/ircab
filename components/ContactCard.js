@@ -18,19 +18,15 @@ function ContactCard() {
         boxShadow={'5px 10px 18px black'}
         zIndex={10}
     >
-        <Heading as={'h2'} size='md' color={'gray.500'}>Contactez Nous</Heading>
+        <Heading as={'h2'} size='md' color={'gray.500'}>Contactez-nous</Heading>
         <List spacing={5}>
             <ListItem>
                 <ListIcon as={MdEmail}/>
                 <a href='mailto:contact@ir-cab.com'>contact@ir-cab.com</a>
             </ListItem>
             <ListItem>
-                <ListIcon as={MdEmail}/>
-                <a href='mailto:contact@sk-corporate.com'>contact@sk-corporate.com</a>
-            </ListItem>
-            <ListItem>
                 <ListIcon as={MdPhone}/>
-                06 73 94 63 22
+                023 461 573
             </ListItem>
         </List>
         <Divider orientation='horizontal' w={'80%'} color='gray.500' />

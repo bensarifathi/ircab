@@ -16,7 +16,7 @@ function PartenaireForm() {
     const [model, setModel] = useState('')
     const [commune, setCommune] = useState('')
     const [how, setHow] = useState('')
-    const [annee, setAnnee] = useState(2011)
+    const [annee, setAnnee] = useState(2009)
 
     const router = useRouter()
 
@@ -53,20 +53,23 @@ function PartenaireForm() {
                     bg={'gray.100'}
                     value={nom}
                     onChange={(e) => setNom(e.target.value)}
+                    _hover={{bg:'white'}}
                     />
                 <Input 
                     variant='filled' 
-                    placeholder='Prenom' 
+                    placeholder='Prénom' 
                     bg={'gray.100'}
                     value={prenom}
                     onChange={(e) => setPrenom(e.target.value)}
+                    _hover={{bg:'white'}}
                     />
                 <Input 
                     variant='filled' 
-                    placeholder='Numero de telephone'
+                    placeholder='Numéro de téléphone'
                     bg={'gray.100'}
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
+                    _hover={{bg:'white'}}
                     />
                 <Input 
                     variant='filled' 
@@ -75,6 +78,7 @@ function PartenaireForm() {
                     value={email}
                     type='email'
                     onChange={(e) => setEmail(e.target.value)}
+                    _hover={{bg:'white'}}
                     />
                 <Input 
                     variant='filled' 
@@ -82,17 +86,20 @@ function PartenaireForm() {
                     bg={'gray.100'}
                     value={marque}
                     onChange={(e) => setMarque(e.target.value)}
+                    _hover={{bg:'white'}}
                     />
                 <Input 
                     variant='filled' 
-                    placeholder='Modele de la voiture' 
+                    placeholder='Modèle de la voiture' 
                     bg={'gray.100'}
                     value={model}
                     onChange={(e) => setModel(e.target.value)}
+                    _hover={{bg:'white'}}
                     />
                 <NumberInput defaultValue={annee} 
-                    min={2011} max={2022} bg={'gray.100'}
+                    min={2009} max={2022} bg={'gray.100'}
                     onChange={(e) => setAnnee(e)}
+                    _hover={{bg:'white'}}
                     >
                     <NumberInputField />
                     <NumberInputStepper>
@@ -104,6 +111,7 @@ function PartenaireForm() {
                     bg={'gray.100'}
                     value={commune}
                     onChange={(e) => setCommune(e.target.value)}
+                    _hover={{bg:'white'}}
                     >
                     <option style={{'backgroundColor': 'white'}} value="Alger-Centre">Alger-Centre</option>
                     <option style={{'backgroundColor': 'white'}} value="Sidi M'Hamed">Sidi M'Hamed</option>
@@ -167,6 +175,7 @@ function PartenaireForm() {
                     bg={'gray.100'}
                     value={how}
                     onChange={(e) => setHow(e.target.value)}
+                    _hover={{bg:'white'}}
                 >
                     <option style={{'backgroundColor': 'white'}} value="Site internet de la société">Site internet de la société</option>
                     <option style={{'backgroundColor': 'white'}} value="Moteurs de recherche (Google, Bing, Yahoo, ...)">Moteurs de recherche (Google, Bing, Yahoo, ...)</option>

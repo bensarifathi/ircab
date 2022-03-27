@@ -12,7 +12,7 @@ function Business() {
   return (
     <>
     <Head>
-      <title>Ircab-Business</title>
+      <title>iRcab-Business</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
@@ -22,7 +22,7 @@ function Business() {
                 Votre entreprise a besoin de chauffeurs ?
             </Heading>
             <Heading as='h2' size='md' my={5}>
-                Cabrooz Business vous offre le meilleur service pour vos déplacements 
+                iRcab Business vous offre le meilleur service pour vos déplacements 
                 professionnels !
             </Heading>
             <Text fontWeight='bold' as='p'>
@@ -33,9 +33,9 @@ function Business() {
     </Box>
     <Box w='100%' py={10}>
       <Container maxW='container.xl'>
-        <Heading as='h1'>Pourquoi choisir Ircab Business ?</Heading>
+        <Heading as='h1'>Pourquoi choisir iRcab Business ?</Heading>
         <Text as='p'>
-          Cabrooz Business est une plateforme intuitive qui vous permet de réserver 
+          iRcab Business est une plateforme intuitive qui vous permet de réserver 
           un chauffeur pour tous les déplacements professionnels de votre entreprise 
           en toute sécurité grâce à une large flotte de chauffeurs expérimentés et 
           vérifiés, prêts à vous accompagner dans tous vos trajets à Alger et vers 
