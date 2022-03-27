@@ -6,7 +6,7 @@ function FaqDriver() {
   return (
     <SimpleGrid columns={{base:1, md:2}} spacing={20} my={5}>
         <Box px={{base:'none', md:20}}>
-          <Faq title={"Comment devenir partenaire Ircab ?"}>
+          <Faq title={"Comment devenir partenaire iRcab ?"}>
           Après avoir fait votre pré-inscription, un conseiller vous appelera pour 
           confirmer certaines informations avec vous, ensuite, vous serez invité à déposer 
           votre dossier administratif au niveau de notre siège situé à Hydra. 

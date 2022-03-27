@@ -38,9 +38,9 @@ function Footer(props) {
 
           <Stack align={'flex-start'}>
             <ListHeaderFooter>Réseau sociaux</ListHeaderFooter>
-            <Link href={'#'}><a><Icon as={FaFacebook} /> facebook</a></Link>
-            <Link href={'#'}><a><Icon as={FaLinkedinIn} /> linkedin</a></Link>
-            <Link href={'#'}><a><Icon as={FaInstagram} /> instagram</a></Link>
+            <a href='#'><Icon as={FaFacebook} /> Facebook</a>
+            <a href='#'><Icon as={FaLinkedinIn} /> Linkedin</a>
+            <a href='#'><Icon as={FaInstagram} /> Instagram</a>
           </Stack>
 
           {/* <Stack align={'flex-start'}>

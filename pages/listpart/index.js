@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import Head from 'next/head'
 import { signOut, useSession, signIn } from "next-auth/react";
 import dbConnect from '../../lib/dbConnect'
@@ -19,11 +19,22 @@ import WelcomeMsg from '../../components/WelcomeMsg';
 function ListPart({ drivers }) {
     const { data: session } = useSession();
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const [currId, setCurrId] = useState('')
     const cancelRef = useRef()
     
     const handleClick = (id) => {
-        console.log(id)
+        setCurrId(id)
         onOpen()
+    }
+
+    const deleteDriver = async () => {
+      const res = await fetch(`/api/partenaire/delete/${currId}`, {
+        method: 'Delete'
+      })
+      if (res.ok) {
+        onClose()
+      }
+      
     }
 
     return (
@@ -88,7 +99,7 @@ function ListPart({ drivers }) {
                     <Button ref={cancelRef} onClick={onClose}>
                       Cancel
                     </Button>
-                    <Button colorScheme='red' onClick={onClose} ml={3}>
+                    <Button colorScheme='red' ml={3} onClick={deleteDriver}>
                       Delete
                     </Button>
                   </AlertDialogFooter>

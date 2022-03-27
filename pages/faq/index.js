@@ -18,8 +18,8 @@ function FAQ() {
       </Head>
       <Flex bg='twitter.100' direction='column'>
         <Container my={10}>
-          <Image src='/images/question.svg' boxSize={250}/>
-          <Heading as='h1' my={10}>
+          <Image src='/images/bavarder.png' boxSize={250} mx='auto'/>
+          <Heading as='h1' my={10} textAlign='center'>
             NOUS RÉPONDONS À TOUTES VOS QUESTIONS
           </Heading>
         </Container>

@@ -71,8 +71,8 @@ const Index = () => {
         </Box>        
       </Box>
 
-      <SimpleGrid columns={{base: 1, md:2}} mt={{base:2, md:10}} maxW='80%' mx={'auto'}>
-        <Container boxSize="md">
+      <SimpleGrid columns={{base: 1, md:2}} mt={{base:2, md:10}} maxW='80%' mx={'auto'} my={{base:5}}>
+        <Container boxSize={{base:'sm', md:'lg'}}>
             <motion.div
                 animate='animate' initial='initial' variants={{
                   initial: {
@@ -90,7 +90,6 @@ const Index = () => {
             >
             <Img src='/images/driver-new.webp' 
             alt='driver-new' borderRadius={25} boxShadow="25px 25px 0px -5px"
-            sizes={{base:'sm'}}
             />
             </motion.div>
         </Container>
@@ -138,21 +137,21 @@ const Index = () => {
               bg={btn1Id === btnStat && 'ircab.100'}
               onClick={(e) => highlightBtn(e.target.id)}
               >
-              Commandez votre chauffeur VTC en quelaue click seulement
+              Demandez votre chauffeur VTC en quelques clics seulement !
             </Button>
             <Button variant={'solid'} borderRadius={25} id={btn2Id}
               colorScheme={btn2Id === btnStat && 'red'} w={'fit-content'}
               bg={btn2Id === btnStat && 'ircab.100'}
               onClick={(e) => highlightBtn(e.target.id)}
               >
-              Choisissez votre moyen de payment préféré
+              Vous n'avez plus de connexion internet ? l'application basculera en mode hors ligne 
             </Button>
             <Button variant={'solid'} borderRadius={25}
               colorScheme={btn3Id === btnStat && 'red'} w={'fit-content'} id={btn3Id}
               bg={btn3Id === btnStat && 'ircab.100'}
               onClick={(e) => highlightBtn(e.target.id)}
             >
-              Possibilité de discuter avec votre chauffeur VTC à l'écrit
+              Choisissez votre type de véhicule
             </Button>
           </SimpleGrid>
           <Button variant="solid" colorScheme="blue" mt={10} borderRadius="20px">

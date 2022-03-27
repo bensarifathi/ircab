@@ -6,14 +6,14 @@ function Faq({children, title}) {
     const [show, setShow] = useState(false)
     const handleToggle = () => setShow(!show)
     return (
-    <Box border={'1px solid black'} borderRadius={5} p={5}>
+    <Box border={'1px solid black'} borderRadius={5} p={5} onClick={handleToggle}>
         <Collapse startingHeight={25} in={show}>
             <Flex>
                 <Text as='p' fontSize={'lg'} fontWeight='bold'>
                     {title}
                 </Text>
                 <Spacer />
-                <Icon as={MdExpandMore} onClick={handleToggle} _hover={{cursor:'pointer'}}/>
+                <Icon as={MdExpandMore} _hover={{cursor:'pointer'}}/>
             </Flex>
             
             <Text as='p' mt={5}>

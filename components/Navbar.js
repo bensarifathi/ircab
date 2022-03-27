@@ -5,7 +5,7 @@ import {
     Flex,
     Button,
     useDisclosure,
-    Image
+    Image,
   } from "@chakra-ui/react";
 
 import { HamburgerIcon } from "@chakra-ui/icons";
