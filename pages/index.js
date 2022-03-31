@@ -65,7 +65,7 @@ const Index = () => {
         </Box>        
       </Box>
 
-      <SimpleGrid columns={{base: 1, md:2}} mt={{base:2, md:20}} maxW='80%' mx={'auto'} mb={{base:5, md:'none'}}>
+      <SimpleGrid columns={{base: 1, md:2}} mt={{base:20, md:20}} maxW='80%' mx={'auto'} mb={{base:5, md:'none'}}>
         <Container boxSize={{base:'sm', md:'lg'}}>
           <Img src='/images/driver-new.webp' 
           alt='driver-new' borderRadius={25} boxShadow="25px 25px 0px -5px"
@@ -133,7 +133,9 @@ const Index = () => {
             </SimpleGrid>
             <Button variant="solid" colorScheme="ircab.secondary"
               mt={10} bg='ircab.secondary' color='white'>
-            Demandez une course
+            <a href='https://play.google.com/store/apps/details?id=com.cabroozrider' rel="noreferrer" target="_blank">
+              Demandez une course
+            </a>
             </Button>
           
         </Container>
@@ -158,7 +160,7 @@ const Index = () => {
           </Container>
           <Container>
           <a href='https://play.google.com/store/apps/details?id=com.cabroozrider' rel="noreferrer" target="_blank">
-            <Image src='/images/play-store-dl.svg'  width={'200px'} height={'150px'}/>
+          <Img src='/images/playStore.png' boxSize={'150px'}/>
           </a>
           </Container>
         </SimpleGrid>
