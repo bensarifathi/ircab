@@ -50,56 +50,62 @@ function PartenaireForm() {
                 <Input 
                     variant='filled' w={'auto'} 
                     placeholder='Nom'
-                    bg={'gray.100'}
+                    bg={'ircab.bg'}
                     value={nom}
                     onChange={(e) => setNom(e.target.value)}
-                    _hover={{bg:'white'}}
+                    _hover={{bg:'ircab.bg'}}
+                    _focus={{bg:'ircab.bg'}}
                     />
                 <Input 
                     variant='filled' 
                     placeholder='Prénom' 
-                    bg={'gray.100'}
+                    bg={'ircab.bg'}
                     value={prenom}
                     onChange={(e) => setPrenom(e.target.value)}
-                    _hover={{bg:'white'}}
+                    _hover={{bg:'ircab.bg'}}
+                    _focus={{bg:'ircab.bg'}}
                     />
                 <Input 
                     variant='filled' 
                     placeholder='Numéro de téléphone'
-                    bg={'gray.100'}
+                    bg={'ircab.bg'}
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    _hover={{bg:'white'}}
+                    _hover={{bg:'ircab.bg'}}
+                    _focus={{bg:'ircab.bg'}}
                     />
                 <Input 
                     variant='filled' 
                     placeholder='Email' 
-                    bg={'gray.100'}
+                    bg={'ircab.bg'}
                     value={email}
                     type='email'
                     onChange={(e) => setEmail(e.target.value)}
-                    _hover={{bg:'white'}}
+                    _hover={{bg:'ircab.bg'}}
+                    _focus={{bg:'ircab.bg'}}
                     />
                 <Input 
                     variant='filled' 
                     placeholder='Marque de la voiture' 
-                    bg={'gray.100'}
+                    bg={'ircab.bg'}
                     value={marque}
                     onChange={(e) => setMarque(e.target.value)}
-                    _hover={{bg:'white'}}
+                    _hover={{bg:'ircab.bg'}}
+                    _focus={{bg:'ircab.bg'}}
                     />
                 <Input 
                     variant='filled' 
                     placeholder='Modèle de la voiture' 
-                    bg={'gray.100'}
+                    bg={'ircab.bg'}
                     value={model}
                     onChange={(e) => setModel(e.target.value)}
-                    _hover={{bg:'white'}}
+                    _hover={{bg:'ircab.bg'}}
+                    _focus={{bg:'ircab.bg'}}
                     />
                 <NumberInput defaultValue={annee} 
-                    min={2009} max={2022} bg={'gray.100'}
+                    min={2009} max={2022} bg={'ircab.bg'}
                     onChange={(e) => setAnnee(e)}
-                    _hover={{bg:'white'}}
+                    _hover={{bg:'ircab.bg'}}
                     >
                     <NumberInputField />
                     <NumberInputStepper>
@@ -108,10 +114,11 @@ function PartenaireForm() {
                     </NumberInputStepper>
                 </NumberInput>
                 <Select placeholder='Commune de résidence' 
-                    bg={'gray.100'}
+                    bg={'ircab.bg'}
                     value={commune}
                     onChange={(e) => setCommune(e.target.value)}
-                    _hover={{bg:'white'}}
+                    _hover={{bg:'ircab.bg'}}
+                    _focus={{bg:'ircab.bg'}}
                     >
                     <option style={{'backgroundColor': 'white'}} value="Alger-Centre">Alger-Centre</option>
                     <option style={{'backgroundColor': 'white'}} value="Sidi M'Hamed">Sidi M'Hamed</option>
@@ -172,10 +179,11 @@ function PartenaireForm() {
                     <option style={{'backgroundColor': 'white'}} value="Saoula">Saoula</option>
                 </Select>
                 <Select placeholder='Comment avez-vous connu Ircab ?' 
-                    bg={'gray.100'}
+                    bg={'ircab.bg'}
                     value={how}
                     onChange={(e) => setHow(e.target.value)}
-                    _hover={{bg:'white'}}
+                    _hover={{bg:'ircab.bg'}}
+                    _focus={{bg:'ircab.bg'}}
                 >
                     <option style={{'backgroundColor': 'white'}} value="Site internet de la société">Site internet de la société</option>
                     <option style={{'backgroundColor': 'white'}} value="Moteurs de recherche (Google, Bing, Yahoo, ...)">Moteurs de recherche (Google, Bing, Yahoo, ...)</option>
@@ -184,7 +192,10 @@ function PartenaireForm() {
                     <option style={{'backgroundColor': 'white'}} value="Recommendation / Amis / Proches">Recommendation / Amis / Proches</option>
                     <option style={{'backgroundColor': 'white'}} value="Autres">Autres</option>
                 </Select>
-                <Button colorScheme={'blue'} borderRadius={25} onClick={handleSubmit}>Devenir partenaire</Button>
+                <Button colorScheme={'ircab.primary.driver'} bg='ircab.primary.driver' 
+                    onClick={handleSubmit}>
+                    Devenir partenaire
+                </Button>
             </SimpleGrid>
     )
 }

@@ -36,7 +36,7 @@ function Securite() {
         />
       </Flex>
       <Container maxW='container.xl' my={10}>
-        <Text fontSize={'lg'} fontWeight={'bold'} color='#0082FF'>
+        <Text fontSize={'lg'} fontWeight={'bold'} color='ircab.secondary'>
           SOYEZ UNE BONNE PERSONNE. PENSER À LA SANTÉ ET À LA SÉCURITÉ DES AUTRES.
         </Text>
         <SecuriteList title={'Engagez-vous à respecter la sécurité sanitaire'} order={1}>
@@ -61,7 +61,7 @@ function Securite() {
       </Container>
       <Flex bg={'#f7f7f7'} py={10} direction='column'>
         <Container>
-          <Heading as={'h1'} color='#0082FF'>LA SÉCURITÉ AVANT TOUT ! </Heading>
+          <Heading as={'h1'} color='ircab.secondary'>LA SÉCURITÉ AVANT TOUT ! </Heading>
         </Container>
         <SimpleGrid columns={{base:1, md:2, lg:3}} spacing={10} w='80%' mx='auto'>
           <SecuriteCard icon='/images/check.svg' 

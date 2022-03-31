@@ -22,7 +22,7 @@ function Navbar(props) {
       justify="space-between"
       wrap="wrap"
       padding={3}
-      bgGradient='linear(to-r, #047cc7, #02385A)'
+      bgGradient='linear(to-r, #047cc7, ircab.secondary)'
       color="white"
       {...props}
       borderBottom='2px solid #FE504F'
@@ -63,7 +63,7 @@ function Navbar(props) {
             </Link>
 
             <a rel="noreferrer" target="_blank" href='https://play.google.com/store/apps/details?id=com.cabroozrider'>
-                <Button bg={'#FE504F'} _hover={{bg:'red'}} borderRadius={25}>
+                <Button bg={'ircab.primary.rider'} _hover={{bg:'ircab.primary.rider'}}>
                     Démarrer une course
                 </Button>
             </a>

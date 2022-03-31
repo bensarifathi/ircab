@@ -7,7 +7,7 @@ import { FaLinkedinIn, FaFacebook, FaInstagram } from 'react-icons/fa'
 function Footer(props) {
   return (
     <Box
-        bgGradient='linear(to-r, #047cc7, #02385A)'
+        bgGradient='linear(to-r, #047cc7, ircab.secondary)'
         color="white"
         borderTop={'3px solid #8bd0fc'}
     >
@@ -31,7 +31,7 @@ function Footer(props) {
           <Stack align={'flex-start'}>
             <ListHeaderFooter>Legal</ListHeaderFooter>
             <Link href={'#'}>Cookies Policy</Link>
-            <Link href={'#'}>Privacy Policy</Link>
+            <Link href={'/politique-de-confidentialite'}>Privacy Policy</Link>
             <Link href={'#'}>Terms of Service</Link>
             <Link href={'#'}>Law Enforcement</Link>
           </Stack>
@@ -51,7 +51,7 @@ function Footer(props) {
       </Container>
       <Box
         borderTopWidth={1}
-        bgGradient='linear(to-r, #047cc7, #02385A)'>
+        bgGradient='linear(to-r, #047cc7, ircab.secondary)'>
         <Container
           py={4}
           direction={{ base: 'column', md: 'row' }}

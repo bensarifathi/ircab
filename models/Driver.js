@@ -14,7 +14,7 @@ const DriverSchema = new Schema({
     year: Number,
     commune: String,
     how: String
-})
+}, { timestamps: true })
 
 var Driver;
 

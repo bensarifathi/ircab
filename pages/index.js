@@ -8,7 +8,6 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 
 const Index = () => {
@@ -16,6 +15,14 @@ const Index = () => {
   const btn1Id = 1
   const btn2Id = 2
   const btn3Id = 3
+
+  
+
+  const images = {
+    1: '/images/ask-driver-md.png',
+    2: '/images/off-line-md.png',
+    3: '/images/select-cab-md.png',
+  }
 
   const highlightBtn = (id) => {
     setBtnStat(Number(id))
@@ -34,35 +41,22 @@ const Index = () => {
       bgRepeat="no-repeat"
       >
         <Container maxW='container.xl' pt={{base: 'none', md:20}} boxSize="full">
-          <motion.div animate='animate' initial='initial' variants={{
-            initial: {
-              opacity: 0,
-              scale:0.8,
-              x: -100
-            },
-            animate: {
-              opacity: 1,
-              scale: 1,
-              x: 0,
-              transition: {
-                duration: 0.8
-              }
-            }
-          }}>
-            <Heading as="h1" color="white" fontSize={55} >
-              Déplacez-vous.
-            </Heading>
-            <Heading as='h1' color="#fff">Même sans Internet !</Heading>
-            <Text color='white' w='md' fontSize={'18px'}>
-              Besoin d’un chauffeur VTC pour vos déplacements personnels ou professionnels ?
-              iRcab est la première application de transport VTC en Algérie qui offre la possibilité de se déplacer même sans Internet.
-              Vous n'avez pas de crédit ? Vous êtes dans un sous-sol ? 
-              pas de problème, vous pouvez quand même reserver une course avec iRcab. 
-            </Text>
-            <a href='https://play.google.com/store/apps/details?id=com.cabroozrider' rel="noreferrer" target="_blank">
-              <Image src='/images/playStore.png'  width={'150px'} height={'150px'}/>
-            </a> 
-          </motion.div>
+          
+          <Heading as="h1" color="white" fontSize={55} >
+            Déplacez-vous.
+          </Heading>
+          <Heading as='h1' color="#fff">Même sans Internet !</Heading>
+          <Text color='white' w='md' fontSize={'18px'}>
+            Besoin d’un chauffeur VTC pour vos déplacements personnels ou professionnels ?
+            iRcab est la première application de transport VTC en Algérie qui offre la possibilité de se déplacer même sans Internet.
+            Vous n'avez pas de crédit ? Vous êtes dans un sous-sol ? 
+            pas de problème, vous pouvez quand même reserver une course avec iRcab. 
+          </Text>
+          <a href='https://play.google.com/store/apps/details?id=com.cabroozrider' rel="noreferrer" target="_blank">
+            <Img src='/images/playStore.png' boxSize={'150px'}/>
+          </a>
+            
+          
         </Container>
         <Box position="relative" display={'block'} bottom='-1px' height={'auto'} width='100%' zIndex={0}>
         <svg viewBox='0 0 1920 60' >
@@ -71,115 +65,84 @@ const Index = () => {
         </Box>        
       </Box>
 
-      <SimpleGrid columns={{base: 1, md:2}} mt={{base:2, md:10}} maxW='80%' mx={'auto'} my={{base:5}}>
+      <SimpleGrid columns={{base: 1, md:2}} mt={{base:2, md:20}} maxW='80%' mx={'auto'} mb={{base:5, md:'none'}}>
         <Container boxSize={{base:'sm', md:'lg'}}>
-            <motion.div
-                animate='animate' initial='initial' variants={{
-                  initial: {
-                    scale:0.8,
-                    x: -100
-                  },
-                  animate:{
-                    scale:1,
-                    x:0,
-                    transition: {
-                      duration: 0.8
-                    }
-                  }
-                }}
-            >
-            <Img src='/images/driver-new.webp' 
-            alt='driver-new' borderRadius={25} boxShadow="25px 25px 0px -5px"
-            />
-            </motion.div>
+          <Img src='/images/driver-new.webp' 
+          alt='driver-new' borderRadius={25} boxShadow="25px 25px 0px -5px"
+          />
         </Container>
         <Container>
-          <Text as="span" color="#047cc7" fontWeight={'bold'}>
+            <Text as="span" color="ircab.secondary" fontWeight={'bold'}>
             DEVENEZ PARTENAIRE VTC iRcab 
-          </Text>
-          <Heading as="h2">
-            Vos propres heures.
-          </Heading>
-          <Heading as="h2" color="#047cc7">Aucune condition !</Heading>
-          <Text as="p">
-          Besoin d'un revenu complémentaire ? Gagnez de l'argent tout en ayant du temps pour votre famille et vos affaires. 
-          Vous êtes votre propre patron, vous définissez vos horaires avec vos propres conditions.
-          Rejoignez le réseau Ircab Driver aujourd'hui et faites partie d'une communauté de partenaires professionnels et vérifiés. 
-          </Text>
-          <Link href='/partenaire'>
-            <Button variant="solid" bg='ircab.100' colorScheme={'red'} mt={10} borderRadius="20px">
-              Devenir Partenaire !
-            </Button>
-          </Link>
+            </Text>
+            <Heading as="h2">
+              Vos propres heures.
+            </Heading>
+            <Heading as="h2" color="ircab.secondary">Aucune condition !</Heading>
+            <Text as="p">
+            Besoin d'un revenu complémentaire ? Gagnez de l'argent tout en ayant du temps pour votre famille et vos affaires. 
+            Vous êtes votre propre patron, vous définissez vos horaires avec vos propres conditions.
+            Rejoignez le réseau Ircab Driver aujourd'hui et faites partie d'une communauté de partenaires professionnels et vérifiés. 
+            </Text>
+            <Link href='/partenaire'>
+              <Button variant="solid" bg='ircab.primary.rider' colorScheme={'ircab.primary.rider'} mt={10}>
+                Devenir Partenaire !
+              </Button>
+            </Link>      
         </Container>
       </SimpleGrid>
-      <Flex bgGradient='linear(to-r, #047cc7 ,#02385A)'>
+      <Flex bgGradient='linear(to-r, #047cc7 , ircab.secondary)'>
       <SimpleGrid 
         columns={{base:1, md:2}} 
         w={'80%'}
         mx='auto'
       >
         <Container py={20}>
-          <Text as="span" fontSize={20} fontWeight="bold" color="white" my={10}>
+            <Text as="span" fontSize={20} fontWeight="bold" color="white" my={10}>
             Déplacez-vous AVEC iRcab 
-          </Text>
-          <Heading as="h2">A tout moment de la journée.</Heading>
-          <Heading as="h2" color="white">Même en étant hors ligne !</Heading>
-          <Text as="p" color="white">
-            Une application 100% Algérienne conçue pour vous débarasser de vos problèmes de déplacements quotidiens. 
-            Testée par des personnes qui ont une connaissance limitée aux Smartphones et la téchnologie moderne. 
-            Le but de l'application est de faciliter les déplacements en taxi, même pour les personnes agées. 
-          </Text>
-
-          <SimpleGrid columns={1} spacing={10} mt={5}>
-            <Button variant={'solid'} borderRadius={25} id={btn1Id}
-              colorScheme={btn1Id === btnStat && 'red'} w={'fit-content'}
-              bg={btn1Id === btnStat && 'ircab.100'}
+            </Text>
+            <Heading as="h2">A tout moment de la journée.</Heading>
+            <Heading as="h2" color="white">Même en étant hors ligne !</Heading>
+            <Text as="p" color="white">
+              Une application 100% Algérienne conçue pour vous débarasser de vos problèmes de déplacements quotidiens. 
+              Testée par des personnes qui ont une connaissance limitée aux Smartphones et la téchnologie moderne. 
+              Le but de l'application est de faciliter les déplacements en taxi, même pour les personnes agées. 
+            </Text>
+            <SimpleGrid columns={1} spacing={10} mt={5}>
+              <Button variant={'solid'} id={btn1Id}
+              colorScheme={btn1Id === btnStat && 'ircab.primary.rider'} w={'fit-content'}
+              bg={btn1Id === btnStat && 'ircab.primary.rider'}
               onClick={(e) => highlightBtn(e.target.id)}
               >
               Demandez votre chauffeur VTC en quelques clics seulement !
-            </Button>
-            <Button variant={'solid'} borderRadius={25} id={btn2Id}
-              colorScheme={btn2Id === btnStat && 'red'} w={'fit-content'}
-              bg={btn2Id === btnStat && 'ircab.100'}
+              </Button>
+              <Button variant={'solid'} id={btn2Id}
+              colorScheme={btn2Id === btnStat && 'ircab.primary.rider'} w={'fit-content'}
+              bg={btn2Id === btnStat && 'ircab.primary.rider'}
               onClick={(e) => highlightBtn(e.target.id)}
               >
-              Vous n'avez plus de connexion internet ? l'application basculera en mode hors ligne 
-            </Button>
-            <Button variant={'solid'} borderRadius={25}
-              colorScheme={btn3Id === btnStat && 'red'} w={'fit-content'} id={btn3Id}
-              bg={btn3Id === btnStat && 'ircab.100'}
+              Même sans connection 
+              </Button>
+              <Button variant={'solid'}
+              colorScheme={btn3Id === btnStat && 'ircab.primary.rider'} w={'fit-content'} id={btn3Id}
+              bg={btn3Id === btnStat && 'ircab.primary.rider'}
               onClick={(e) => highlightBtn(e.target.id)}
-            >
+              >
               Choisissez votre type de véhicule
             </Button>
-          </SimpleGrid>
-          <Button variant="solid" colorScheme="blue" mt={10} borderRadius="20px">
+            </SimpleGrid>
+            <Button variant="solid" colorScheme="ircab.secondary"
+              mt={10} bg='ircab.secondary' color='white'>
             Demandez une course
-          </Button>
+            </Button>
+          
         </Container>
-        <Container mt={{base:10, md:'none'}} py={10}>
-          <motion.div
-            animate='animate' initial='initial' variants={{
-              initial: {
-                scale:0.8,
-                x: -100
-              },
-              animate:{
-                scale:1,
-                x:0,
-                transition: {
-                  duration: 0.8
-                }
-              }
-            }}
-          >
+        <Container mt={{base:10, md:'none'}} pt={10}>
           <Img  
-            src='/images/app-ui.webp' 
+            src={images[btnStat]} 
             alt='ircab mobile application' 
             boxSize={'lg'}
           />
-          </motion.div>
         </Container>
       </SimpleGrid>
       </Flex>
@@ -219,33 +182,17 @@ const Index = () => {
               de transport adaptées à vos besoins.
             </Text>
             <Link href="/business">
-            <Button variant="solid" colorScheme={'red'} bg={'ircab.100'} mt={10} borderRadius="20px">
+            <Button variant="solid" colorScheme={'ircab.primary.rider'} bg={'ircab.primary.rider'} mt={10}>
               <a>En savoir plus sur iRcab Business </a>
             </Button>
             </Link>
           </Container>
+          
           <Container mb={{base:10, md:'none'}}>
-            <motion.div
-              animate='animate' initial='initial' variants={{
-                initial: {
-                  scale:0.8,
-                  x: -100
-                },
-                animate:{
-                  scale:1,
-                  x:0,
-                  transition: {
-                    duration: 0.8
-                  }
-                }
-              }}
-            >
             <Img src='/images/business-new.webp' 
                 alt='driver-new' borderRadius={25} 
                 boxShadow="25px 25px 0px -5px"
             />
-            </motion.div>
-            
           </Container>
         </SimpleGrid>
       </Flex>

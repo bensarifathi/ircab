@@ -16,7 +16,7 @@ export default NextAuth({
         if (email === 'superadmin@ir-cab.com' 
           && password === 'g-"fUrgvL5%A9#YU') {
             return {
-              name: 'admin',
+              name: 'Adib',
               email: email
             }
           }

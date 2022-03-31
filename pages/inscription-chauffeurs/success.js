@@ -12,10 +12,10 @@ function Success() {
   return (
     <>
         <Head>
-            <title>iRcab-Preinscription-Success</title>
+            <title>iRcab-Inscription-Success</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
-        <Box bg='driver.10' py={20}>
+        <Box bg='driver.100' py={20}>
             <Container>
                 <Image src='/images/remerciement.png' alt='success-inscription' mx={'auto'}/>
                 <Heading as='h1' mx='auto' textAlign={'center'} my={5}>
@@ -23,20 +23,19 @@ function Success() {
                 </Heading>
                 <Text as='p' textAlign='center'>
                     Nous avons bien reçu votre demande !
-                    Un spécialiste vous contactera dans les 24 heures qui suivent pour 
-                    vous fournir toutes les informations nécessaires.
+                    Le processus d'activation d'un compte prendra environ 48h
                 </Text>
             </Container>
             <Center my={10}>
                 <Link href='/'>
-                    <Button colorScheme='blue' size='md' my={2}>
+                    <Button colorScheme='ircab.primary.driver' bg='ircab.primary.driver' size='md' my={2}>
                         REVENIR A L'ACEUIL   
                     </Button>
                 </Link> 
             </Center>
         </Box>
     </>
-  )
+    )
 }
 
 export default Success

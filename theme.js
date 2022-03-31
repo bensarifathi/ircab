@@ -6,8 +6,15 @@ const theme = extendTheme({
   },
   colors: {
     ircab: {
-      100: '#FE504F',
-      900: "#1a202c",
+      bg: '#F8FAFB',
+      primary: {
+        rider: '#FF5050',
+        driver: '#F28907'
+      },
+      secondary: '#02395A'
+    },
+    driver: {
+      100: '#F2890780'
     }
   }
 })

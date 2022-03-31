@@ -3,8 +3,8 @@ import Head from 'next/head'
 import { 
     Container, Heading, 
     Flex, Text, SimpleGrid, 
-    HStack, Image,
-    Box
+    Center, Image,
+    Box, Button
 } from '@chakra-ui/react'
 import PartenaireForm from '../../components/PartenaireForm'
 import PartenaireCard from '../../components/PartenaireCard'
@@ -17,7 +17,7 @@ function Partenaire() {
             <title>iRcab</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
-        <Flex direction={'column'} bg='twitter.100'>
+        <Flex direction={'column'} bg='driver.100'>
             <Container my={10} maxW='container.xl'>
                 <Heading as={'h1'}>Commencez à gagner de l'argent avec 
                     seulement 10% de commission ! 
@@ -50,7 +50,7 @@ function Partenaire() {
                     n'ont pas Internet !
                 </Text>
                 <Heading as='h1' size={'lg'} my={10}>Pourquoi iRcab ?</Heading>
-                <SimpleGrid columns={{base:1, md:2, lg:3}} spacing={30}>
+                <SimpleGrid columns={{base:1, md:2, lg:3}} spacing={10}>
                     <PartenaireCard icon={'/images/conditions.svg'} 
                     title='Vos propres conditions'>
                         Rentabilisez vos trajets et gagnez de l'argent tout en ayant du temps 
@@ -72,78 +72,80 @@ function Partenaire() {
                 </SimpleGrid>   
             </Container>
         </Flex>
-        <Flex direction={'column'}>
-            <Container my={10}>
+        <Container my={10}>
                 <Heading as='h2' size='lg'>Comment ça marche ?</Heading>
                 <Text as='p'>
                     Vous voulez devenir partenaire iRcab et vous ne savez pas quelles sont 
                     les procédures à suivre ? C'est très simple !
                 </Text>
-            </Container>
-            <Container maxW='container.xl'>
-            <HStack spacing={20} my={10} >
+        </Container>
+        <Box mx='auto' w='80%'>
+        <SimpleGrid columns={{base:1, md:2}} spacing={10}>
+            <Container>
                 <Image src='/images/app-ios-android.jpeg' 
                 alt='driver-new' borderRadius={25} boxShadow="25px 25px 0px -5px"
-                boxSize='300px'
-                minW='500px'
                 />
-                <Box>
-                    <Heading as='h2' size='lg'>Téléchargez l'application Driver</Heading>
-                    <Text as='p' maxW='60%' my={10}>
-                        Vous voulez devenir partenaire iRcab et vous ne savez pas 
-                        quelles sont les procédures à suivre ? C'est très simple !
-                    </Text>
-                        <a 
-                        href='https://play.google.com/store/apps/details?id=com.cabroozdriver&hl=fr&gl=US'
-                        target='_blank' rel="noreferrer"
-                        >
-                            Télécharger l'application Driver 
-                        </a>
-                </Box>
-            </HStack>
-            <HStack spacing={20} my={20} mx='auto'>
+            </Container>
+            <Container my='auto'>
+                <Heading as='h2' size='lg'>Téléchargez l'application Driver</Heading>
+                <Text as='p' maxW='60%' my={10}>
+                    Vous voulez devenir partenaire iRcab et vous ne savez pas 
+                    quelles sont les procédures à suivre ? C'est très simple !
+                </Text>
+                <Button bg='ircab.primary.driver' colorScheme='ircab.primary.driver'>
+                    <a 
+                    href='https://play.google.com/store/apps/details?id=com.cabroozdriver&hl=fr&gl=US'
+                    target='_blank' rel="noreferrer"
+                    >
+                        Télécharger l'application Driver 
+                    </a>
+                </Button>
+            </Container>
+            <Container>
                 <Image src='/images/dossier-chauffeur.jpeg' 
                 alt='driver-new' borderRadius={25} boxShadow="25px 25px 0px -5px"
-                boxSize='300px'
-                minW='500px'
                 />
-                <Box>
-                    <Heading as='h2' size='lg'>Dossier à fournir</Heading>
-                    <Text as='p' maxW='60%' my={10}>
-                        Après avoir terminé votre pré-inscription, 
-                        vous serez recontacté par l'équipe iRcab afin de compléter 
-                        votre dossier partenaire en fournissant les documents 
-                        nécessaires.
-                    </Text>
-                </Box>
-            </HStack>
-            <HStack spacing={20} my={10} mx='auto'>
+            </Container>
+            <Container my='auto'>
+                <Heading as='h2' size='lg'>Dossier à fournir</Heading>
+                <Text as='p' maxW='60%' my={10}>
+                    Après avoir terminé votre pré-inscription, 
+                    vous serez recontacté par l'équipe iRcab afin de compléter 
+                    votre dossier partenaire en fournissant les documents 
+                    nécessaires.
+                </Text>
+            </Container>
+            <Container>
                 <Image src='/images/formation-chauffeur.jpeg' 
                 alt='driver-new' borderRadius={25} boxShadow="25px 25px 0px -5px"
-                boxSize='300px'
-                minW='500px'
                 />
-                <Box>
-                    <Heading as='h2' size='lg'>Formation partenaires iRcab</Heading>
-                    <Text as='p' maxW='60%' my={10}>
-                        Une fois votre dossier accepté, vous êtes invité à assister à 
-                        la formation de partenaires iRcab selon le planning 
-                        disponible afin de mieux comprendre le fonctionnement de 
-                        l'application iRcab Driver.
-                    </Text>
-                </Box>
-            </HStack>
             </Container>
-            <HStack spacing={40} mx='auto' my={10}>
+            <Container my='auto'>
+                <Heading as='h2' size='lg'>
+                    Formation partenaires iRcab
+                </Heading>
+                <Text as='p' maxW='60%' my={10}>
+                    Une fois votre dossier accepté, vous êtes invité à assister à 
+                    la formation de partenaires iRcab selon le planning 
+                    disponible afin de mieux comprendre le fonctionnement de 
+                    l'application iRcab Driver.
+                </Text>
+            </Container>
+        </SimpleGrid>
+        </Box>
+        <Box my={10}>
+            <Center>
                 <Image src='/images/education.svg' alt='education' boxSize={'sm'}/>
-                <Box>
-                    <Heading as='h1' size={'3xl'}>Félicitations !</Heading>
-                    <Heading as='h3' size={'xs'}>
+            </Center>
+            <Center my={2}>
+                <Heading as='h1' size={'3xl'}>Félicitations !</Heading>
+            </Center>
+            <Center>
+                <Heading as='h3' size={'xs'}>
                         Vous êtes prêt à démarrer votre première course iRcab
-                    </Heading>
-                </Box>
-            </HStack>
-        </Flex>
+                </Heading>
+            </Center>
+        </Box>
         </>
     )
 }

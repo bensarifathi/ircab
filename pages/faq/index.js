@@ -6,9 +6,17 @@ import FaqDriver from '../../components/FaqDriver'
 
 function FAQ() {
   const [btnState, setBtnState] = useState(false)
+  const [bntValue, setBtnValue] = useState('Client')
   const handleClick = () => {
     setBtnState(!btnState)
+    if (bntValue === 'Client') {
+      setBtnValue('Partenaire')
+    }else{
+      setBtnValue('Client')
+    }
+    
   }
+  console.log(btnState)
   return (
     <>
       <Head>
@@ -23,14 +31,11 @@ function FAQ() {
             NOUS RÉPONDONS À TOUTES VOS QUESTIONS
           </Heading>
         </Container>
-        <SimpleGrid columns={{base:1, md:2}} mx={'auto'} mb={10} spacing={20}>
-          <Button w={'xs'} colorScheme='blue'
-            borderRadius={25} onClick={handleClick} variant={!btnState ? 'solid': 'ghost'}>
-            Clients
-          </Button>
-          <Button w={'xs'} colorScheme='blue' 
-            borderRadius={25} onClick={handleClick} variant={btnState ? 'solid': 'ghost'}>
-            Partenaires
+        <SimpleGrid columns={1} mx={'auto'} mb={10} spacing={20}>
+          <Button w={'xs'} colorScheme={bntValue === 'Client' ? 'ircab.primary.rider' : 'ircab.primary.driver'}
+            bg={bntValue === 'Client' ? 'ircab.primary.rider' : 'ircab.primary.driver'}
+             onClick={handleClick}>
+            {bntValue}
           </Button>
         </SimpleGrid>
       </Flex>
