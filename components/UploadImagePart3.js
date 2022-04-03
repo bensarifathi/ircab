@@ -7,7 +7,7 @@ import { FaImage, FaUpload } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 
 
-function UploadImagePart3() {
+function UploadImagePart3({ id }) {
     // router
     const router = useRouter()
     // state
@@ -37,6 +37,7 @@ function UploadImagePart3() {
         formData.append('residence', residence)
         formData.append('assurance', assurance)
         formData.append('casier-judiciaire', casierJudiciaire)
+        formData.append('id', id)
         try {
             setIsLoading(true)
             await fetch('/api/driver/register', {
@@ -98,7 +99,7 @@ function UploadImagePart3() {
             onClick={handleSubmit}
             leftIcon={<FaUpload />}
             isLoading={isLoading}
-            disabled={isLoading || !casierJudiciaire || !residence || !assurance}
+            disabled={isLoading || !casierJudiciaire || !residence || !assurance || !id}
         >
             Envoyer
         </Button>

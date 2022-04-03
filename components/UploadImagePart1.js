@@ -6,7 +6,7 @@ import {
 import { FaImage, FaUpload } from 'react-icons/fa'
 
 
-function UploadImagePart1({ currStep, updateStep }) {
+function UploadImagePart1({ currStep, updateStep, id }) {
     // state
     const [vehicleFront, setVehicleFront] = useState()
     const [vehicleBack, setVehicleBack] = useState()
@@ -34,6 +34,7 @@ function UploadImagePart1({ currStep, updateStep }) {
         formData.append('vehicle-front', vehicleFront)
         formData.append('vehicle-back', vehicleBack)
         formData.append('carte-grise', carteGrise)
+        formData.append('id', id)
         try {
             setIsLoading(true)
             await fetch('/api/driver/register', {
@@ -94,7 +95,7 @@ function UploadImagePart1({ currStep, updateStep }) {
             onClick={handleSubmit}
             leftIcon={<FaUpload />}
             isLoading={isLoading}
-            disabled={isLoading || !vehicleFront || !vehicleBack || !carteGrise}
+            disabled={isLoading || !vehicleFront || !vehicleBack || !carteGrise || !id}
         >
             Envoyer
         </Button>

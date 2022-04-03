@@ -22,6 +22,8 @@ function BusinessForm() {
             bg={'gray.100'}
             value={nom}
             onChange={(e) => setNom(e.target.value)}
+            _hover={{bg:'ircab.bg'}}
+            _focus={{bg:'ircab.bg'}}
             />
         <Input 
             variant='filled' 
@@ -30,6 +32,8 @@ function BusinessForm() {
             value={email}
             type='email'
             onChange={(e) => setEmail(e.target.value)}
+            _hover={{bg:'ircab.bg'}}
+            _focus={{bg:'ircab.bg'}}
             />
         <Input 
             variant='filled' 
@@ -37,6 +41,8 @@ function BusinessForm() {
             bg={'gray.100'}
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
+            _hover={{bg:'ircab.bg'}}
+            _focus={{bg:'ircab.bg'}}
             />
         <Input 
             variant='filled' 
@@ -44,6 +50,8 @@ function BusinessForm() {
             bg={'gray.100'}
             value={address}
             onChange={(e) => setAddress(e.target.value)}
+            _hover={{bg:'ircab.bg'}}
+            _focus={{bg:'ircab.bg'}}
             />
         <Select placeholder='Commune de résidence' 
             bg={'gray.100'}
@@ -120,7 +128,9 @@ function BusinessForm() {
             <option style={{'backgroundColor': 'white'}} value="Recommendation / Amis / Proches">Recommendation / Amis / Proches</option>
             <option style={{'backgroundColor': 'white'}} value="Autres">Autres</option>
         </Select>
-        <Button colorScheme={'blue'} borderRadius={25} onClick={handleSubmit}>Envoyer</Button>
+        <Button colorScheme={'ircab.primary.driver'}  bg='ircab.primary.driver' onClick={handleSubmit}>
+            Envoyer
+        </Button>
     </SimpleGrid>
   )
 }

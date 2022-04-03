@@ -1,5 +1,7 @@
 import NextAuth from "next-auth"
-import CredentialsProvider from "next-auth/providers/credentials";
+import CredentialsProvider from "next-auth/providers/credentials"
+import dbConnect from '../../../lib/dbConnect'
+import Admin from '../../../models/Admin'
 
 export default NextAuth({
   providers: [
@@ -13,13 +15,19 @@ export default NextAuth({
       },
       async authorize(credentials) {
         const { email, password } = credentials
-        if (email === 'superadmin@ir-cab.com' 
-          && password === 'g-"fUrgvL5%A9#YU') {
+        try {
+          await dbConnect()
+          const admin = await Admin.findOne({ email: email }).exec();
+          if (admin 
+          && password === admin.password) {
             return {
               name: 'Adib',
               email: email
             }
           }
+        } catch (error) {
+          console.log(error)
+        }
         }
     })
   ],

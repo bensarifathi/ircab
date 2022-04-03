@@ -16,7 +16,7 @@ function Business() {
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <Box w='100%' bg='twitter.100' py={10}>
+    <Box w='100%' bg='driver.100' py={10}>
         <Container maxW='container.xl'>
             <Heading as='h1' size='xl'>
                 Votre entreprise a besoin de chauffeurs ?

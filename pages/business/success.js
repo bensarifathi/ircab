@@ -15,7 +15,7 @@ function Success() {
             <title>iRcab-Preinscription-Success</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         </Head>
-        <Box bg='twitter.100' py={20}>
+        <Box bg='driver.100' py={20}>
             <Container>
                 <Image src='/images/remerciement.png' alt='success-inscription' mx={'auto'}/>
                 <Heading as='h1' mx='auto' textAlign={'center'} my={5}>

@@ -8,7 +8,7 @@ handler.use(middleware)
 handler.post(async (req, res) => {
     try {
         for (let key in req.files) {
-            await uploadFile(req.files[key][0], 'ndjsanfjikasnfiqu3rf3g4')
+            await uploadFile(req.files[key][0], req.body['id'][0])
         }
     } catch (error) {
         res.status(500).json({error: 'internal server error'})

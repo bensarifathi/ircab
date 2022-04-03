@@ -48,6 +48,22 @@ function ListPart({ drivers }) {
         
       }
     }
+    const dlCsv = async () => {
+      try {
+        const res = await fetch('/api/partenaire/download')
+        const blob = await res.blob()
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = url;
+        a.setAttribute('download', 'drivers.csv');
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+      } catch (error) {
+        
+      }
+    }
     return (
         <>
             <Head>
@@ -98,6 +114,9 @@ function ListPart({ drivers }) {
                   <Button colorScheme={'twitter'} onClick={loadMore}>
                    Load More
                   </Button>
+                  <Button my={3} ml={2} colorScheme={'twitter'} onClick={dlCsv}>
+                    Download
+                  </Button>
                 </Center>
                 
                 <AlertDialog
@@ -137,7 +156,7 @@ export async function getServerSideProps() {
     await dbConnect()
   
     /* find all the data in our database */
-    const result = await Driver.find({}).limit(1).sort({createdAt: -1})
+    const result = await Driver.find({}).limit(10).sort({createdAt: -1})
     // const drivers = result.map((doc) => {
     //   const driver = doc.toObject()
     //   driver._id = driver._id.toString()

@@ -8,9 +8,13 @@ import {
 import UploadImagePart1 from '../../components/UploadImagePart1'
 import UploadImagePart2 from '../../components/UploadImagePart2'
 import UploadImagePart3 from '../../components/UploadImagePart3'
+import { useRouter } from 'next/router'
+
 
 function Inscription() {
     const [step, setStep] = useState(0)
+    const router = useRouter()
+    const {id} = router.query
     return (
       <>
       <Container maxW='container.xl' py={10}>
@@ -26,17 +30,17 @@ function Inscription() {
           <TabPanels>
             <TabPanel>
               <Box w='md' mx='auto' bg='ircab.bg' p={10}>
-                <UploadImagePart1 currStep={step} updateStep={setStep}/>
+                <UploadImagePart1 currStep={step} updateStep={setStep} id={id}/>
               </Box>
             </TabPanel>
             <TabPanel>
               <Box w='md' mx='auto' bg='ircab.bg' p={10}>
-                <UploadImagePart2 currStep={step} updateStep={setStep}/>
+                <UploadImagePart2 currStep={step} updateStep={setStep} id={id}/>
               </Box>
             </TabPanel>
             <TabPanel>
               <Box w='md' mx='auto' bg='ircab.bg' p={10}>
-                <UploadImagePart3 />
+                <UploadImagePart3 id={id}/>
               </Box>
             </TabPanel>
           </TabPanels>
