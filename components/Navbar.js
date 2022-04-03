@@ -40,18 +40,19 @@ function Navbar(props) {
             display={{ base: isOpen ? "flex" : "none", md: "flex" }}
             width={{ base: "full", md: "auto" }}
             alignItems="center"
+            spacing={{base: 'none', md: '24px'}}
             mt={{ base: 4, md: 0 }}
         >
             <Link href='/partenaire'>
-                <Button variant='ghost'>Partenaire</Button>
+                <a>Partenaire</a>
             </Link>
 
             <Link href="/securite">
-            <Button variant='ghost'><a>Securité</a></Button>
+            <a>Securité</a>
             </Link>
             
             <Link href="/faq">
-                <Button variant='ghost'><a>FAQ</a></Button>
+                <a>FAQ</a>
             </Link>
 
             {/* <Link href="/carriere">
@@ -59,7 +60,7 @@ function Navbar(props) {
                 </Link> */}
             
             <Link href="/support">
-                <Button variant='ghost'><a>Support</a></Button>
+                <a>Support</a>
             </Link>
 
             <a rel="noreferrer" target="_blank" href='https://play.google.com/store/apps/details?id=com.cabroozrider'>
