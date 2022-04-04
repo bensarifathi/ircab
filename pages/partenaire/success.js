@@ -29,7 +29,7 @@ function Success() {
             </Container>
             <Center my={10}>
                 <Link href='/'>
-                    <Button colorScheme='blue' size='md' my={2}>
+                    <Button colorScheme='ircab.primary.driver' bg='ircab.primary.driver' size='md' my={2}>
                         REVENIR A L'ACEUIL   
                     </Button>
                 </Link> 

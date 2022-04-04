@@ -16,7 +16,6 @@ function Footer(props) {
           <Stack align={'flex-start'}>
             <ListHeaderFooter>Company</ListHeaderFooter>
             <Link href={'#'}>About Us</Link>
-            <Link href={'#'}>Blog</Link>
             <Link href={'#'}>Careers</Link>
             <Link href={'#'}>Contact Us</Link>
           </Stack>
@@ -30,10 +29,9 @@ function Footer(props) {
 
           <Stack align={'flex-start'}>
             <ListHeaderFooter>Legal</ListHeaderFooter>
-            <Link href={'#'}>Cookies Policy</Link>
+            <Link href={'/politique-de-confidentialite'}>Cookies Policy</Link>
             <Link href={'/politique-de-confidentialite'}>Privacy Policy</Link>
             <Link href={'#'}>Terms of Service</Link>
-            <Link href={'#'}>Law Enforcement</Link>
           </Stack>
 
           <Stack align={'flex-start'}>

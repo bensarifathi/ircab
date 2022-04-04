@@ -17,6 +17,7 @@ function PartenaireForm() {
     const [commune, setCommune] = useState('')
     const [how, setHow] = useState('')
     const [annee, setAnnee] = useState(2009)
+    const [isLoading, setIsLoading] = useState(false)
 
     const router = useRouter()
 
@@ -32,6 +33,7 @@ function PartenaireForm() {
             how,
             annee
         }
+        setIsLoading(true)
         const res = await fetch('/api/partenaire/add', {
             method: 'POST',
             body: JSON.stringify(form),
@@ -40,6 +42,7 @@ function PartenaireForm() {
             }
         })
         if (res.status === 201) {
+            setIsLoading(false)
             router.push('/partenaire/success')
         }
         console.log('response code ', res.status)
@@ -193,7 +196,7 @@ function PartenaireForm() {
                     <option style={{'backgroundColor': 'white'}} value="Autres">Autres</option>
                 </Select>
                 <Button colorScheme={'ircab.primary.driver'} bg='ircab.primary.driver' 
-                    onClick={handleSubmit}>
+                    onClick={handleSubmit} isLoading={isLoading} disabled={isLoading}>
                     Devenir partenaire
                 </Button>
             </SimpleGrid>

@@ -139,13 +139,13 @@ const Index = () => {
             </Button>
           
         </Container>
-        <Container mt={{base:10, md:'none'}} pt={10}>
+        
           <Img  
             src={images[btnStat]} 
             alt='ircab mobile application' 
             boxSize={'lg'}
+            mt={10}
           />
-        </Container>
       </SimpleGrid>
       </Flex>
       <Flex bg={'black'}>
