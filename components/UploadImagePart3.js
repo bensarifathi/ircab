@@ -101,7 +101,7 @@ function UploadImagePart3({ id }) {
             isLoading={isLoading}
             disabled={isLoading || !casierJudiciaire || !residence || !assurance || !id}
         >
-            Envoyer3
+            Envoyer
         </Button>
         
     </SimpleGrid>
