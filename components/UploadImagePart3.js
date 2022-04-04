@@ -55,7 +55,7 @@ function UploadImagePart3({ id }) {
 
     return (
     <SimpleGrid columns={1} spacing={10}>
-        <Input type='file' accept='image/jpg' 
+        <Input type='file' accept='image/*' 
             hidden ref={residenceRef} onChange={handleResidence}/>
         
         <Tooltip label='Certificat de résidence'>
@@ -69,7 +69,7 @@ function UploadImagePart3({ id }) {
             </Button>
         </Tooltip>
 
-        <Input type='file' accept='image/jpg' 
+        <Input type='file' accept='image/*' 
             hidden ref={assuranceRef} onChange={handleAssurance}/>
         <Tooltip label='Assurance'>
             <Button bg='ircab.primary.driver' 
@@ -81,7 +81,7 @@ function UploadImagePart3({ id }) {
             </Button>
         </Tooltip>
 
-        <Input type='file' accept='image/jpg' 
+        <Input type='file' accept='image/*' 
             hidden ref={casierJudiciaireRef} onChange={handleCasier}/>
         <Tooltip label='Casier judiciaire'>
             <Button bg='ircab.primary.driver' 
