@@ -54,7 +54,7 @@ function UploadImagePart2({ currStep, updateStep, id }) {
     <SimpleGrid columns={1} spacing={10}>
         <Input type='file' accept='image/jpg' 
             hidden ref={permitFrontRef} onChange={handlePFront}/>
-        <Tooltip label='Pérmit avant'>
+        <Tooltip label='Permis de conduire recto'>
             <Button bg='ircab.primary.driver' 
                 onClick={() => permitFrontRef.current.click()}
                 _hover={{bg:'ircab.primary.driver'}}
@@ -67,7 +67,7 @@ function UploadImagePart2({ currStep, updateStep, id }) {
         
         <Input type='file' accept='image/jpg' 
             hidden ref={permitBackRef} onChange={handlePBack}/>
-        <Tooltip label='Pérmit arrière'>
+        <Tooltip label='Permis de conduire verso'>
             <Button bg='ircab.primary.driver' 
                 onClick={() => permitBackRef.current.click()}
                 _hover={{bg:'ircab.primary.driver'}}
@@ -78,7 +78,7 @@ function UploadImagePart2({ currStep, updateStep, id }) {
         </Tooltip>
         <Input type='file' accept='image/jpg' 
             hidden ref={controleTechRef} onChange={handleControleTech}/>
-        <Tooltip label='Controle technique'>
+        <Tooltip label='Contrôle technique'>
             <Button bg='ircab.primary.driver' 
                 onClick={() => controleTechRef.current.click()}
                 _hover={{bg:'ircab.primary.driver'}}

@@ -53,7 +53,7 @@ function UploadImagePart1({ currStep, updateStep, id }) {
     <SimpleGrid columns={1} spacing={10}>
         <Input type='file' accept='image/*' 
             hidden ref={vehicleFrontRef} onChange={handleVFront}/>
-        <Tooltip label='Véhicule avant'>
+        <Tooltip label='Photo du véhicule avant'>
             <Button bg='ircab.primary.driver' 
                 onClick={() => vehicleFrontRef.current.click()}
                 _hover={{bg:'ircab.primary.driver'}}
@@ -66,7 +66,7 @@ function UploadImagePart1({ currStep, updateStep, id }) {
         
         <Input type='file' accept='image/*' 
             hidden ref={vehicleBackRef} onChange={handleVBack}/>
-        <Tooltip label='Véhicule arrière'>
+        <Tooltip label='Photo du véhicule arrière'>
             <Button bg='ircab.primary.driver' 
                 onClick={() => vehicleBackRef.current.click()}
                 _hover={{bg:'ircab.primary.driver'}}

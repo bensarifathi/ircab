@@ -58,7 +58,7 @@ function UploadImagePart3({ id }) {
         <Input type='file' accept='image/jpg' 
             hidden ref={residenceRef} onChange={handleResidence}/>
         
-        <Tooltip label='Résidence'>
+        <Tooltip label='Certificat de résidence'>
             <Button bg='ircab.primary.driver' 
                 onClick={() => residenceRef.current.click()}
                 _hover={{bg:'ircab.primary.driver'}}
