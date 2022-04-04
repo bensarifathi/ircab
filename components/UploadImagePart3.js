@@ -65,7 +65,7 @@ function UploadImagePart3({ id }) {
                 leftIcon={<FaImage />}
 
             >
-                {residence ? residence.name : 'Résidence'}
+                {residence ? residence.name : 'Certificat de résidence'}
             </Button>
         </Tooltip>
 

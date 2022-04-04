@@ -18,8 +18,8 @@ function Inscription() {
     return (
       <>
       <Container maxW='container.xl' py={10}>
-        <Heading>Veuillez Completer votre dossier d'inscription</Heading>
-        <Text color='red' fontWeight='bold'>Veuillez vous assurez que les images que vous séléctionner sont de bonnes qualités</Text>
+        <Heading>Veuillez compléter votre dossier d'inscription</Heading>
+        <Text color='red' fontWeight='bold'>Assurez-vous que les images sélectionnées soient de bonne qualité</Text>
       </Container>
         <Tabs isLazy size='md' mx='auto' align='center' colorScheme='ircab.secondary' index={step}>
           <TabList>

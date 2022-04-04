@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {
     Box,
     Stack,
@@ -7,14 +7,22 @@ import {
     useDisclosure,
     Image,
   } from "@chakra-ui/react";
-
+import { useRouter } from 'next/router'
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Link from 'next/link'
 
 
 function Navbar(props) {
+    const driverPathList = ['/partenaire', '/partenaire/success', '/inscription-chauffeurs']
+    const router = useRouter()
+    // state
+    const [isDriver, setIsDriver] = useState(false)
     const { isOpen, onOpen, onClose } = useDisclosure();
     const handleToggle = () => (isOpen ? onClose() : onOpen());
+    useEffect(() => {
+        const isDriverPath = driverPathList.includes(router.pathname)
+        setIsDriver(isDriverPath)
+    }, [router.pathname])
   return (
     <Flex
       as="nav"
@@ -22,10 +30,10 @@ function Navbar(props) {
       justify="space-between"
       wrap="wrap"
       padding={3}
-      bgGradient='linear(to-r, #047cc7, ircab.secondary)'
+      bgGradient={isDriver ? 'linear(to-r, driver.100, ircab.primary.driver)': 'linear(to-r, #047cc7, ircab.secondary)'}
       color="white"
       {...props}
-      borderBottom='2px solid #FE504F'
+      borderBottom={isDriver ? '2px solid #F28907': '2px solid #FE504F'}
     >
         <Flex align="center">
             <Link href="/"><a><Image src='/images/iRcab.png' height={'40px'}/></a></Link>
@@ -40,7 +48,7 @@ function Navbar(props) {
             display={{ base: isOpen ? "flex" : "none", md: "flex" }}
             width={{ base: "full", md: "auto" }}
             alignItems="center"
-            spacing={{base: 'none', md: '24px'}}
+            spacing={{base: '10px', md: '24px'}}
             mt={{ base: 4, md: 0 }}
         >
             <Link href='/partenaire'>

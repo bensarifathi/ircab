@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Box, Container, Stack, SimpleGrid, Text, Icon } from "@chakra-ui/react"
 import Link from 'next/link'
 import ListHeaderFooter from './ListHeaderFooter'
 import { FaLinkedinIn, FaFacebook, FaInstagram } from 'react-icons/fa'
+import { useRouter } from 'next/router'
 
 function Footer(props) {
+  const driverPathList = ['/partenaire', '/partenaire/success', '/inscription-chauffeurs']
+  const router = useRouter()
+  // state
+  const [isDriver, setIsDriver] = useState(false)
+  useEffect(() => {
+    const isDriverPath = driverPathList.includes(router.pathname)
+    setIsDriver(isDriverPath)
+  }, [router.pathname])
   return (
     <Box
-        bgGradient='linear(to-r, #047cc7, ircab.secondary)'
+        bgGradient={isDriver ? 'linear(to-r, driver.100, ircab.primary.driver)': 'linear(to-r, #047cc7, ircab.secondary)'}
         color="white"
         borderTop={'3px solid #8bd0fc'}
     >
@@ -49,7 +58,7 @@ function Footer(props) {
       </Container>
       <Box
         borderTopWidth={1}
-        bgGradient='linear(to-r, #047cc7, ircab.secondary)'>
+        bgGradient={isDriver ? 'linear(to-r, driver.100, ircab.primary.driver)': 'linear(to-r, #047cc7, ircab.secondary)'}>
         <Container
           py={4}
           direction={{ base: 'column', md: 'row' }}

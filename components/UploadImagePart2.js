@@ -61,7 +61,7 @@ function UploadImagePart2({ currStep, updateStep, id }) {
                 leftIcon={<FaImage />}
 
             >
-                {permitFront ? permitFront.name: 'Pérmit avant'}
+                {permitFront ? permitFront.name: 'Permis de conduire recto'}
             </Button>
         </Tooltip>
         
@@ -73,7 +73,7 @@ function UploadImagePart2({ currStep, updateStep, id }) {
                 _hover={{bg:'ircab.primary.driver'}}
                 leftIcon={<FaImage />}
             >
-                {permitBack ? permitBack.name : 'Pérmit arrière'}   
+                {permitBack ? permitBack.name : 'Permis de conduire verso'}   
             </Button>
         </Tooltip>
         <Input type='file' accept='image/jpg' 
@@ -85,7 +85,7 @@ function UploadImagePart2({ currStep, updateStep, id }) {
                 leftIcon={<FaImage />}
 
             >
-                {controleTech ? controleTech.name : 'Controle technique'}   
+                {controleTech ? controleTech.name : 'Contrôle technique'}   
             </Button>
         </Tooltip>
 

@@ -60,7 +60,7 @@ function UploadImagePart1({ currStep, updateStep, id }) {
                 leftIcon={<FaImage />}
 
             >
-                {vehicleFront ? vehicleFront.name : 'Véhicule avant'}
+                {vehicleFront ? vehicleFront.name : 'Photo du véhicule avant'}
             </Button>
         </Tooltip>
         
@@ -73,7 +73,7 @@ function UploadImagePart1({ currStep, updateStep, id }) {
                 leftIcon={<FaImage />}
 
             >
-                {vehicleBack ? vehicleBack.name : 'Véhicule arrière'}
+                {vehicleBack ? vehicleBack.name : 'Photo du véhicule arrière'}
             </Button>
         </Tooltip>
         
