@@ -16,7 +16,7 @@ function Footer(props) {
   }, [router.pathname])
   return (
     <Box
-        bgGradient={isDriver ? 'linear(to-r, driver.100, ircab.primary.driver)': 'linear(to-r, #047cc7, ircab.secondary)'}
+        bgGradient='linear(to-r, #047cc7, ircab.secondary)'
         color="white"
         borderTop={'3px solid #8bd0fc'}
     >
@@ -58,7 +58,7 @@ function Footer(props) {
       </Container>
       <Box
         borderTopWidth={1}
-        bgGradient={isDriver ? 'linear(to-r, driver.100, ircab.primary.driver)': 'linear(to-r, #047cc7, ircab.secondary)'}>
+        bgGradient='linear(to-r, #047cc7, ircab.secondary)'>
         <Container
           py={4}
           direction={{ base: 'column', md: 'row' }}

@@ -85,7 +85,7 @@ const Index = () => {
             Rejoignez le réseau Ircab Driver aujourd'hui et faites partie d'une communauté de partenaires professionnels et vérifiés. 
             </Text>
             <Link href='/partenaire'>
-              <Button variant="solid" bg='ircab.primary.rider' colorScheme={'ircab.primary.rider'} mt={10}>
+              <Button variant="solid" bg='ircab.primary.rider' colorScheme={'ircab.primary.rider'}>
                 Devenir Partenaire !
               </Button>
             </Link>      

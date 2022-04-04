@@ -30,13 +30,13 @@ function Navbar(props) {
       justify="space-between"
       wrap="wrap"
       padding={3}
-      bgGradient={isDriver ? 'linear(to-r, driver.100, ircab.primary.driver)': 'linear(to-r, #047cc7, ircab.secondary)'}
+      bgGradient='linear(to-r, #047cc7, ircab.secondary)'
       color="white"
       {...props}
       borderBottom={isDriver ? '2px solid #F28907': '2px solid #FE504F'}
     >
         <Flex align="center">
-            <Link href="/"><a><Image src='/images/iRcab.png' height={'40px'}/></a></Link>
+            <Link href="/"><a><Image src={isDriver ? '/images/ircab-driver.png': '/images/iRcab.png'} height={'40px'}/></a></Link>
         </Flex>
 
         <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
