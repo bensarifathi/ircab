@@ -121,7 +121,7 @@ const Index = () => {
               bg={btn2Id === btnStat && 'ircab.primary.rider'}
               onClick={(e) => highlightBtn(e.target.id)}
               >
-              Même sans connection 
+              Même sans connexion à internet
               </Button>
               <Button variant={'solid'}
               colorScheme={btn3Id === btnStat && 'ircab.primary.rider'} w={'fit-content'} id={btn3Id}

@@ -13,7 +13,11 @@ const DriverSchema = new Schema({
     model: String,
     year: Number,
     commune: String,
-    how: String
+    how: String,
+    isCheck: {
+      type: Boolean,
+      default: false
+    }
 }, { timestamps: true })
 
 var Driver;

@@ -9,22 +9,22 @@ import {
     AlertDialog, AlertDialogOverlay,
     AlertDialogContent, AlertDialogHeader,
     AlertDialogBody, AlertDialogFooter,
-    useDisclosure, Button, IconButton, Center
+    useDisclosure, Button, IconButton, Center, Input
 } from '@chakra-ui/react'
-import { DeleteIcon } from '@chakra-ui/icons'
+import { DeleteIcon, CheckIcon } from '@chakra-ui/icons'
 
-import NotLogin from '../../../components/NotLogin';
-import WelcomeMsg from '../../../components/WelcomeMsg';
+import NotLogin from '../../../components/NotLogin'
+import WelcomeMsg from '../../../components/WelcomeMsg'
+import DownloadType from '../../../components/DownloadType';
 
-function ListPart({ drivers }) {
+function ListPart({ drivers, count }) {
     const { data: session } = useSession()
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [currId, setCurrId] = useState('')
     const [partenaire, setPartenaire] = useState(drivers)
     const cancelRef = useRef()
     const now = new Date()
-    const lastThreeDay = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 3);
-    
+    const lastThreeDay = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 3)
     const handleClick = (id) => {
         setCurrId(id)
         onOpen()
@@ -48,22 +48,7 @@ function ListPart({ drivers }) {
         
       }
     }
-    const dlCsv = async () => {
-      try {
-        const res = await fetch('/api/partenaire/download')
-        const blob = await res.blob()
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.style.display = 'none';
-        a.href = url;
-        a.setAttribute('download', 'drivers.csv');
-        document.body.appendChild(a);
-        a.click();
-        window.URL.revokeObjectURL(url);
-      } catch (error) {
-        
-      }
-    }
+
     return (
         <>
             <Head>
@@ -78,6 +63,7 @@ function ListPart({ drivers }) {
                   <TableCaption minH={'30vh'}>List partenaire</TableCaption>
                   <Thead>
                       <Tr>
+                          <Th>Registred At</Th>
                           <Th>Nom</Th>
                           <Th>Prenom</Th>
                           <Th>Numero Telephone</Th>
@@ -93,6 +79,7 @@ function ListPart({ drivers }) {
                         const newDate = new Date(driver.createdAt)
                         return (
                             <Tr key={driver._id} bg={newDate > lastThreeDay && 'whatsapp.100'}>
+                                <Td>{newDate.toDateString()}</Td>
                                 <Td>{driver.nom}</Td>
                                 <Td>{driver.prenom}</Td>
                                 <Td>{driver.phone}</Td>
@@ -103,6 +90,7 @@ function ListPart({ drivers }) {
                                 <Td>
                                     <IconButton icon={<DeleteIcon color={'red'}/>} 
                                         onClick={() => handleClick(driver._id)}/>
+                                    {driver.isCheck && <CheckIcon/>}
                                 </Td>
                             </Tr>
                         )
@@ -111,12 +99,14 @@ function ListPart({ drivers }) {
                   
                 </Table>
                 <Center my={3}>
-                  <Button colorScheme={'twitter'} onClick={loadMore}>
+                  <Button colorScheme={'twitter'} onClick={loadMore} isDisabled={count >= partenaire.length}>
                    Load More
                   </Button>
-                  <Button my={3} ml={2} colorScheme={'twitter'} onClick={dlCsv}>
+                  {/* <Button my={3} ml={2} colorScheme={'twitter'} onClick={dlCsv}>
                     Download
-                  </Button>
+                  </Button> */}
+                  <DownloadType />
+                  {/* <Input type="date" onChange={(e) => console.log(e.target.value)}/>  */}
                 </Center>
                 
                 <AlertDialog
@@ -157,6 +147,7 @@ export async function getServerSideProps() {
   
     /* find all the data in our database */
     const result = await Driver.find({}).limit(10).sort({createdAt: -1})
+    const count = await Driver.countDocuments()
     // const drivers = result.map((doc) => {
     //   const driver = doc.toObject()
     //   driver._id = driver._id.toString()
@@ -164,7 +155,7 @@ export async function getServerSideProps() {
     // })
     const drivers = JSON.parse(JSON.stringify(result))
   
-    return { props: { drivers } }
+    return { props: { drivers, count } }
 }
 
 export default ListPart
