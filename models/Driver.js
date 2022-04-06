@@ -7,8 +7,8 @@ mongoose.Promise = global.Promise;
 const DriverSchema = new Schema({
     nom: String,
     prenom: String,
-    phone: String,
     email: String,
+    phone: String,
     marque: String,
     model: String,
     year: Number,

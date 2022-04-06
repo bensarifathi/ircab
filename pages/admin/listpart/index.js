@@ -9,7 +9,7 @@ import {
     AlertDialog, AlertDialogOverlay,
     AlertDialogContent, AlertDialogHeader,
     AlertDialogBody, AlertDialogFooter,
-    useDisclosure, Button, IconButton, Center, Input
+    useDisclosure, Button, IconButton, Center
 } from '@chakra-ui/react'
 import { DeleteIcon, CheckIcon } from '@chakra-ui/icons'
 
@@ -66,8 +66,8 @@ function ListPart({ drivers, count }) {
                           <Th>Registred At</Th>
                           <Th>Nom</Th>
                           <Th>Prenom</Th>
-                          <Th>Numero Telephone</Th>
                           <Th>Email</Th>
+                          <Th>Numero Telephone</Th>
                           <Th>Marque</Th>
                           <Th>Model</Th>
                           <Th>Commune</Th>
@@ -82,8 +82,8 @@ function ListPart({ drivers, count }) {
                                 <Td>{newDate.toDateString()}</Td>
                                 <Td>{driver.nom}</Td>
                                 <Td>{driver.prenom}</Td>
-                                <Td>{driver.phone}</Td>
                                 <Td>{driver.email}</Td>
+                                <Td>{driver.phone}</Td>
                                 <Td>{driver.marque}</Td>
                                 <Td>{driver.model}</Td>
                                 <Td>{driver.commune}</Td>

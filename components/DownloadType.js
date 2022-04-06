@@ -21,22 +21,31 @@ function DownloadType() {
     // state
     const [from, setFrom] = useState(null)
     const [to, setTo] = useState(null)
+    const [defaultLoad, setDefaultLoad] = useState(false)
+    const [byDateLoad, setByDateLoad] = useState(false)
+    const [allLoad, setAllLoad] = useState(false)
     //////
     const router = useRouter()
     const { onOpen, onClose, isOpen } = useDisclosure()
     const handleDefault = async () => {
+        setDefaultLoad(true)
         await dlCsvCheck()
+        setDefaultLoad(false)
         onClose()
         router.reload()
     }
     const handleAll = async () => {
+        setAllLoad(true)
         await dlCsvAll()
+        setAllLoad(false)
         onClose()
         router.reload()
     }
 
     const handleBydate = async () => {
+        setByDateLoad(true)
         await dlCsvByDate(from, to)
+        setByDateLoad(true)
         onClose()
         router.reload()
     }
@@ -62,7 +71,7 @@ function DownloadType() {
                 d='flex'
                 alignItems='center'
             >
-                <Button colorScheme={'twitter'} mr={2} onClick={handleAll}>
+                <Button colorScheme={'twitter'} mr={2} onClick={handleAll} isLoading={allLoad} disabled={allLoad}>
                     All
                 </Button>
                 <Text>Download everything</Text>
@@ -81,14 +90,20 @@ function DownloadType() {
                     <Input type={'date'} id='to' onChange={(e) => setTo(e.target.value)}/>
                 </FormControl>
                 <Button colorScheme={'twitter'} isDisabled={!to || !from}
-                    onClick={handleBydate}
+                    onClick={handleBydate} 
+                    isLoading={byDateLoad} 
+                    disabled={byDateLoad}
                 >
                     Filter and download
                 </Button>
                 
             </PopoverBody>
             <PopoverBody>
-                <Button colorScheme={'twitter'} onClick={handleDefault}>
+                <Button colorScheme={'twitter'} 
+                    onClick={handleDefault}
+                    isLoading={defaultLoad}
+                    disabled={defaultLoad}
+                >
                     Default
                 </Button>
             </PopoverBody>

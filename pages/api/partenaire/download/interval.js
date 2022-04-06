@@ -25,6 +25,6 @@ export default async function handler(req, res) {
         await Driver.updateMany({isCheck: false}, {isCheck: true})
     } catch (error) {
         console.log(error)
-        res.status(400).json({ success: false })
+        await pipeline('', res)
     }
 }
