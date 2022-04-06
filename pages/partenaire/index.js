@@ -102,8 +102,9 @@ function Partenaire() {
                 </Button>
             </Container>
             <Container>
-                <Image src='/images/dossier-chauffeur.jpeg' 
+                <Image src='/images/dossier-chauffeur.jpg' 
                 alt='driver-new' borderRadius={25} boxShadow="25px 25px 0px -5px"
+                htmlHeight='70%'
                 />
             </Container>
             <Container my='auto'>
